@@ -1,16 +1,16 @@
-try:
-    num1, num2 = eval(input("Enter two numbers, seperated by a comma :"))
-    result = num1/num2
-    print("Result is ", result)
+def palindrom(r):
+    e=len(r)-1
+    s=0
+    while(s<e):
+        if(r[s]!=r[e]):
+            return False
+        s+=1
+        e-=1
+    return True
 
-except ZeroDivisionError:
-    print("Divion by zero dousnt work and is an error!! ")
+r=(1,2,3,3,2,1)
 
-except SyntaxError:
-    print("comma is missing. Enter numbers seperated by comma")
-
+if(palindrom(r)):
+    print("The tuple is flip-flop")
 else:
-    print("No exceptions ")
-
-finally:
-    print("This will execute no matter what")   
+    print("it is not a flip-flop")

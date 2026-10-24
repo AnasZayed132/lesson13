@@ -1,9 +1,12 @@
-valid = False
-while not valid: 
-    try:
-        n=int(input("Enter a number: "))
-        while n%2==0:
-         print("bye ")
-         valid = True
-    except ValueError:
-       print("invalid")
+weather=(0,1,1,0,1,0,0)
+sunny=0
+rainy=0
+for i in range(0,7):
+    if weather[i]==0:
+        rainy=rainy+1
+    else:
+        sunny=sunny+1
+if sunny >rainy:
+    print("its been mostly good weather this week")
+else:
+    print("its been mostly bad weather this last week")
